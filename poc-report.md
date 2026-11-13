@@ -30,7 +30,7 @@ Evidence classes used throughout: **programmatic** (solver, enumeration, SVG str
 | Codex CLI | 0.169.0. `codex login status` → *Logged in using ChatGPT*. `~/.codex/config.toml` default `model = "gpt-6-astra"`, `model_reasoning_effort = "xhigh"`. `codex exec --help` checked: `-s read-only`, `--json`, `--output-schema`, `-o`, `-i`, `-C`, prompt via stdin. Smoke test passed. |
 | Images API | `OPENAI_API_KEY` read from `.env` (mode 600); never printed or logged. A free `GET /v1/models` listed `gpt-image-2`, `gpt-image-2.5-{flare,sunburst}` and `gpt-image-2.6-{flare,sunburst}`. Chosen: **`gpt-image-2.6-flare`** (current; the docs describe flare as "fast, high-quality" generation), quality `high`. |
 | References | Production prompt, Type 1–12 paragraphs, German type/routing notes, project concept, and `1.zip`–`12.zip` (zip N = type N; 120 PNGs). No Type 13 package exists. The approved Type 13 paragraph (`backend/prompts.py`, per concept §19) is **not in this workspace**, so Claude wrote one from the Type 13 routing row (`test-c/brief.md`). |
-| **Security finding** | `.env` with the API key was **committed in the initial commit** (`d68db6b`) because the ignore file was misspelled `.gitgnore`. Fixed on this branch: renamed to `.gitignore` (which also ignores `.venv/` and the reference zips), and `.env` is no longer tracked. **The key is still in the history of `d68db6b`.** No git remote is configured, so it has not left this machine through git. Rotating the key, or rewriting history, is the operator's decision. |
+| **Security finding** | `.env` with the API key was **committed in the original initial commit** because the ignore file was misspelled `.gitgnore`. Fixed: renamed to `.gitignore` (which also ignores `.venv/` and the reference zips) and `.env` untracked. **History purged at the operator's request:** `git filter-branch` removed `.env` from every commit (all commit IDs changed), then the backup refs, `ORIG_HEAD` and reflog were dropped and `git gc --prune=now` was run. Verified afterwards: the `.env` blob is gone, no commit contains a `.env` path, and a scan of all 128 objects in `.git` finds the key 0 times. No git remote was ever configured. Rotating the key remains advisable because it sat in a committed file. |
 
 ## Pipeline as built (all files in this repo)
 
@@ -118,7 +118,7 @@ Practical costs: **Codex at xhigh effort took 5–17 minutes per construction or
 ## 10. What technical changes are required before implementing the full Ubuntu dashboard?
 
 Required (each traced to a concrete finding in this PoC):
-1. **Rotate the OpenAI key**, or otherwise deal with its presence in commit `d68db6b`, and keep `.gitignore` correct. (Security finding above.)
+1. **Rotate the OpenAI key** (it was committed before the history purge) and keep `.gitignore` correct. (Security finding above.)
 2. **Read the Codex model from the session record**, not from the event stream or config. The provenance record should store the thread id and rollout path. (Question 2.)
 3. **Return the actual render to Codex.** CairoSVG wasn't available in Codex's sandbox: Codex worked blind in a1–a3 and fell back to librsvg previews in c2–c5. Neither renders exactly like the final CairoSVG output. A render step whose output goes back to Codex removes a class of defects that Claude had to catch. (A3, C3.)
 4. **Make a difficulty gate mandatory before approval.** It should rely on a blind solve plus a reviewer, never on the author model's own rating. (All three tests.)
