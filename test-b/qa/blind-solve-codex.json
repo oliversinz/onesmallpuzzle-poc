@@ -1,0 +1,18 @@
+{
+  "answer": "13 inside-doorway passes.",
+  "reasoning": "Take Hall → Office → Library → Studio → Bathroom → Bedroom → Library → Office → Hall → Dining Room → Kitchen → Boot Room → Kitchen → Boot Room, then leave. Each initially lit room is entered once; each initially unlit room is entered twice. This switches every light off. For minimality, all five lit rooms require at least one entry, including a return to the Hall. The four unlit rooms are unavoidable access or exit rooms and require at least two entries each to finish off. Therefore at least 5 + 4×2 = 13 passes are necessary.",
+  "defensible_alternatives": [
+    "Another optimal solution reverses the upper loop: Library → Bedroom → Bathroom → Studio → Library. The total remains 13."
+  ],
+  "ambiguities": [
+    "Some room boundaries, especially Hall–Bedroom, lack a prominent solid wall. I interpreted only the drawn hinged-door openings as usable connections.",
+    "The wording does not explicitly prohibit leaving and re-entering through the back door before finishing, although this does not reduce the minimum here."
+  ],
+  "difficulty": "Medium",
+  "difficulty_reason": "The challenge is recognizing odd/even entry counts and the necessary Boot Room–Kitchen–Boot Room finish. Once noticed, both the route and its optimality are straightforward.",
+  "readability_issues": [
+    "The instructions and bottom counting rule become small when the full image is displayed at phone width.",
+    "Thin doorway leaves, dashed swing arcs, and subtle room boundaries need close inspection, particularly against the dark floors."
+  ],
+  "confidence": "high"
+}

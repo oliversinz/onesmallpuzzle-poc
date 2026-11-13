@@ -1,0 +1,83 @@
+{
+  "bfs_minimum_doorways": 13,
+  "bfs_number_of_shortest_walks": 2,
+  "bfs_shortest_walks": [
+    [
+      "Hall",
+      "Office",
+      "Library",
+      "Bedroom",
+      "Bathroom",
+      "Studio",
+      "Library",
+      "Office",
+      "Hall",
+      "Dining room",
+      "Kitchen",
+      "Boot room",
+      "Kitchen",
+      "Boot room"
+    ],
+    [
+      "Hall",
+      "Office",
+      "Library",
+      "Studio",
+      "Bathroom",
+      "Bedroom",
+      "Library",
+      "Office",
+      "Hall",
+      "Dining room",
+      "Kitchen",
+      "Boot room",
+      "Kitchen",
+      "Boot room"
+    ]
+  ],
+  "dfs_walks_shorter_than_minimum": 0,
+  "dfs_shortest_walks_match_bfs": true,
+  "counting_lower_bound": 13,
+  "counting_bound_per_room": {
+    "Office": 2,
+    "Library": 2,
+    "Studio": 1,
+    "Hall": 1,
+    "Bedroom": 1,
+    "Bathroom": 1,
+    "Dining room": 1,
+    "Kitchen": 2,
+    "Boot room": 2
+  },
+  "bound_is_tight": true,
+  "entries_in_each_shortest_walk": [
+    {
+      "Office": 2,
+      "Library": 2,
+      "Bedroom": 1,
+      "Bathroom": 1,
+      "Studio": 1,
+      "Hall": 1,
+      "Dining room": 1,
+      "Kitchen": 2,
+      "Boot room": 2
+    },
+    {
+      "Office": 2,
+      "Library": 2,
+      "Studio": 1,
+      "Bathroom": 1,
+      "Bedroom": 1,
+      "Hall": 1,
+      "Dining room": 1,
+      "Kitchen": 2,
+      "Boot room": 2
+    }
+  ],
+  "tempting_11_walk_lights_left_on": [
+    "Kitchen",
+    "Boot room"
+  ],
+  "all_shortest_walks_do_north_wing_first": true,
+  "minimum_if_backdoor_reentry_allowed": 13
+}

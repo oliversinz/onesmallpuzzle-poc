@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080" version="1.1">
+<defs>
+ <linearGradient id="sky-veil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe7f6" stop-opacity=".94"/><stop offset=".7" stop-color="#efe7f6" stop-opacity=".76"/><stop offset="1" stop-color="#efe7f6" stop-opacity="0"/></linearGradient>
+ <linearGradient id="snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4dfee"/><stop offset="1" stop-color="#f6f2fa"/></linearGradient>
+ <path id="b2-left" d="M145 828 C145 763 259 735 303 694 C329 668 340 651 340 638"/>
+ <path id="b2-right" d="M215 828 C215 781 314 750 370 706 C399 680 420 652 420 638"/>
+ <path id="b4-left" d="M275 828 C275 800 315 774 365 752 C455 716 570 719 640 684 C683 663 700 654 700 638"/>
+ <path id="b4-right" d="M335 828 C335 807 386 787 433 772 C533 739 650 740 708 706 C752 680 780 657 780 638"/>
+ <path id="b5-left" d="M395 828 C395 814 454 800 520 789 C652 768 781 769 845 706 C876 676 880 650 880 638"/>
+ <path id="b5-right" d="M455 828 C455 828 526 822 590 816 C727 802 863 799 922 731 C954 695 960 656 960 638"/>
+ <g id="soft-routes" fill="none"><use xlink:href="#b2-left"/><use xlink:href="#b2-right"/><use xlink:href="#b5-left"/><use xlink:href="#b5-right"/></g>
+ <g id="sharp-route" fill="none"><use xlink:href="#b4-left"/><use xlink:href="#b4-right"/></g>
+ <g id="car">
+  <ellipse cx="0" cy="647" rx="60" ry="8" fill="#bbb3cc"/>
+  <rect x="-54" y="551" width="14" height="31" rx="5" fill="#514a5d"/><rect x="40" y="551" width="14" height="31" rx="5" fill="#514a5d"/>
+  <rect x="-55" y="612" width="15" height="29" rx="5" fill="#514a5d"/><rect x="40" y="612" width="15" height="29" rx="5" fill="#514a5d"/>
+  <path d="M-45 543 Q-39 533-25 532 L25 532 Q40 533 46 546 L53 622 Q53 645 39 651 L-39 651 Q-53 645-53 622Z" stroke="#625567" stroke-width="2.5"/>
+  <path d="M-45 549 L-38 565 L-40 627 Q-40 643-28 651 L-39 651 Q-53 645-53 622Z M45 548 L38 566 L40 628 Q40 643 28 651 L39 651 Q53 645 53 622Z" fill="#43364e" opacity=".2"/>
+  <path d="M-29 540 L29 540 L34 551 L-34 551Z" fill="#70687e"/>
+  <path d="M-30 555 Q0 551 30 555 L34 589 Q0 595-34 589Z" stroke="#766476" stroke-width="2"/>
+  <path d="M-34 595 Q0 599 34 595 L41 614 Q0 623-41 614Z" fill="#655f75" stroke="#8d839a" stroke-width="2"/>
+  <path d="M-27 599 L-8 602 L-3 615 L-34 612Z" fill="#9391a8"/>
+  <path d="M-36 626 Q0 632 36 626" fill="none" stroke="#665366" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M-44 639 L-28 641 M28 641 L44 639" fill="none" stroke="#eee8db" stroke-width="5"/>
+  <path d="M-22 645 L22 645" fill="none" stroke="#60566a" stroke-width="5"/>
+  <path d="M-55 589 L-62 590 L-62 597 L-52 599 M55 589 L62 590 L62 597 L52 599" stroke="#625567" stroke-width="2"/>
+ </g>
+ <g id="roof-snow">
+  <path d="M-36 554 Q-30 548-22 550 Q-13 546-4 550 Q5 547 13 550 Q28 547 35 554 L39 583 Q40 594 29 596 Q15 593 6 597 Q-7 594-17 597 Q-28 594-35 595 Q-41 591-39 583Z" fill="#c4bfd4"/>
+  <path d="M-37 551 Q-30 545-22 548 Q-12 543-3 547 Q7 544 15 548 Q29 544 35 552 L38 578 Q41 589 30 591 Q19 588 10 593 Q0 590-9 593 Q-19 589-31 591 Q-41 591-39 581Z" fill="#fffdfb"/>
+  <path d="M-29 583 Q-19 580-9 584 M12 581 Q23 578 31 582" fill="none" stroke="#e5e0ee" stroke-width="3" stroke-linecap="round"/>
+ </g>
+ <g id="bay-board"><path d="M-3 518 L-3 545 M4 518 L4 545" stroke="#6e5b68" stroke-width="5"/><path d="M-27 486 L26 486 L28 529 L-27 529Z" fill="#514454" stroke="#a99aa7" stroke-width="2"/><path d="M-28 486 Q-14 481-3 485 Q12 481 28 486" fill="none" stroke="#f8f4fb" stroke-width="5" stroke-linecap="round"/></g>
+</defs>
+<image x="-4" y="-4" width="1088" height="1088" xlink:href="source-image.png"/>
+<rect x="0" y="0" width="1080" height="197" fill="url(#sky-veil)"/>
+<g fill="#3e3349" text-anchor="middle"><text x="540" y="76" font-family="URW Bookman,DejaVu Serif" font-size="54">A Crunch in the Snow</text><text x="540" y="127" font-family="DejaVu Sans" font-size="32">Which bay holds the car that hit the lamp post?</text></g>
+<path d="M0 514 Q96 502 187 518 Q294 530 397 519 Q525 510 639 520 Q807 509 943 513 Q1019 504 1080 512 L1080 1080 L0 1080Z" fill="url(#snow)"/>
+<!-- Sheltered veranda edge: the parked cars face the inn. -->
+<path d="M100 513 L1005 513 L1010 539 L94 539Z" fill="#a894a0" stroke="#776775" stroke-width="2"/>
+<path d="M94 539 L1010 539 L1009 551 L94 551Z" fill="#7f6b7b"/>
+<path d="M103 518 L1004 518 M101 530 L1007 530" fill="none" stroke="#c2b0ba" stroke-width="2"/>
+<!-- A continuous low boundary, with one broad opening at the near left. -->
+<path d="M92 517 L62 828 L126 828 M477 828 L1030 828 L1010 517" fill="none" stroke="#a99aae" stroke-width="18" stroke-linejoin="round"/>
+<path d="M91 511 L61 822 L126 822 M477 822 L1029 822 L1009 511" fill="none" stroke="#fbf8ff" stroke-width="15" stroke-linejoin="round"/>
+<!-- Exactly two softened pairs. -->
+<use xlink:href="#soft-routes" stroke="#d7d2e4" stroke-width="20" stroke-linecap="round"/>
+<use xlink:href="#soft-routes" stroke="#bdb7ce" stroke-width="11" stroke-linecap="round"/>
+<use xlink:href="#soft-routes" stroke="#d8d2e4" stroke-width="5" stroke-linecap="round"/>
+<use xlink:href="#soft-routes" stroke="#e8e3f0" stroke-width="8" stroke-dasharray="13 36 8 52" stroke-linecap="round"/>
+<!-- Exactly one sharp pair, with crisp tread. -->
+<use xlink:href="#sharp-route" stroke="#7a7089" stroke-width="13" stroke-linecap="butt"/>
+<use xlink:href="#sharp-route" stroke="#aaa0b6" stroke-width="8"/>
+<use xlink:href="#sharp-route" stroke="#62576f" stroke-width="15" stroke-dasharray="4 9" stroke-linecap="butt"/>
+<!-- Five numbered bays; bay 3 retains the same unmarked snow as the court. -->
+<use xlink:href="#bay-board" x="200"/><use xlink:href="#bay-board" x="380"/><use xlink:href="#bay-board" x="560"/><use xlink:href="#bay-board" x="740"/><use xlink:href="#bay-board" x="920"/>
+<g font-family="DejaVu Sans" font-size="36" font-weight="bold" text-anchor="middle" fill="#fffaf1"><text x="200" y="520">1</text><text x="380" y="520">2</text><text x="560" y="520">3</text><text x="740" y="520">4</text><text x="920" y="520">5</text></g>
+<use xlink:href="#car" x="200" fill="#f1ce35"/><use xlink:href="#roof-snow" x="200"/>
+<use xlink:href="#car" x="380" fill="#bd3e53"/><use xlink:href="#roof-snow" x="380"/>
+<use xlink:href="#car" x="740" fill="#f1ce35"/>
+<use xlink:href="#car" x="920" fill="#f1ce35"/><use xlink:href="#roof-snow" x="920"/>
+<!-- The sole lamp, on the entrance approach; its lane-facing edge is dented. -->
+<g transform="translate(0,-35)">
+<ellipse cx="470" cy="737" rx="28" ry="6" fill="#beb6ce"/>
+<path d="M450 732 L490 732 L494 739 L446 739Z" fill="#716679"/>
+<path d="M455 626 L482 626 L482 731 L451 731 L451 718 L457 708 L451 699Z" fill="#51485e" stroke="#383144" stroke-width="2"/>
+<path d="M473 632 L477 694 M477 718 L477 730" stroke="#8d8299" stroke-width="4"/>
+<path d="M450 698 L460 695 L466 698 L478 697 L483 703 L480 710 L483 719 L471 718 L465 723 L453 719 L458 709 L449 705Z" fill="#f1ce35"/>
+<path d="M451 698 L458 708 L453 718" fill="none" stroke="#322a3c" stroke-width="3"/>
+<path d="M444 626 L491 626 L487 581 L448 581Z" fill="#4e465b" stroke="#3f374b" stroke-width="2"/>
+<path d="M451 588 L465 588 L465 618 L453 618Z M471 588 L483 588 L485 618 L471 618Z" fill="#c8d1df"/>
+<path d="M439 582 L469 564 L497 582Z" fill="#64576e"/>
+<path d="M440 579 L469 563 L496 579" fill="none" stroke="#f4f0fa" stroke-width="4" stroke-linejoin="round"/>
+<path d="M469 557 L469 564" stroke="#4e465b" stroke-width="4" stroke-linecap="round"/>
+</g>
+<!-- The necessary public rules, with version 2's separate-pair condition. -->
+<g font-family="DejaVu Sans" font-size="29" fill="#3e3349">
+ <text x="56" y="867">It snowed from <tspan font-weight="bold">1 am</tspan> until <tspan font-weight="bold">3 am</tspan>, then stopped.</text>
+ <text x="56" y="910">At <tspan font-weight="bold">2 am</tspan>, the night porter heard a crunch: a car clipped the lamp</text>
+ <text x="56" y="944">post by the entrance. That car is still in the car park.</text>
+ <text x="56" y="986">Every drive since 1 am left its <tspan font-weight="bold">own separate pair</tspan> of tyre tracks:</text>
+ <text x="56" y="1020"><tspan font-weight="bold">softened</tspan> by fresh snow if made while it was snowing, <tspan font-weight="bold">sharp</tspan> if</text>
+ <text x="56" y="1054">made after it stopped. Anything older is buried.</text>
+</g>
+</svg>

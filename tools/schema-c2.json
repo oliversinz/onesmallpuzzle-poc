@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_image_review", "usable", "deviations_from_handoff", "title", "question_on_image", "facts_on_image",
+               "x_caption", "svg", "clue_locations", "pixel_checks_for_claude"],
+  "properties": {
+    "generated_image_review": {"type": "string"},
+    "usable": {"type": "boolean"},
+    "deviations_from_handoff": {"type": "array", "items": {"type": "string"}},
+    "title": {"type": "string"},
+    "question_on_image": {"type": "string"},
+    "facts_on_image": {"type": "array", "items": {"type": "string"}},
+    "x_caption": {"type": "string"},
+    "svg": {"type": "string"},
+    "clue_locations": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": false, "required": ["clue_id", "bbox", "note"],
+                "properties": {"clue_id": {"type": "string"},
+                               "bbox": {"type": "array", "items": {"type": "number"}},
+                               "note": {"type": "string"}}}
+    },
+    "pixel_checks_for_claude": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,210 @@
+{
+ "rooms": {
+  "office": [
+   64,
+   282,
+   314,
+   482
+  ],
+  "library": [
+   314,
+   282,
+   634,
+   482
+  ],
+  "studio": [
+   634,
+   282,
+   904,
+   482
+  ],
+  "hall": [
+   64,
+   482,
+   314,
+   692
+  ],
+  "bedroom": [
+   314,
+   482,
+   634,
+   692
+  ],
+  "bathroom": [
+   634,
+   482,
+   904,
+   692
+  ],
+  "dining": [
+   64,
+   692,
+   314,
+   902
+  ],
+  "kitchen": [
+   314,
+   692,
+   634,
+   902
+  ],
+  "bootroom": [
+   634,
+   692,
+   904,
+   902
+  ]
+ },
+ "boundaries": [
+  {
+   "rooms": [
+    "office",
+    "library"
+   ],
+   "orient": "v",
+   "at": 314,
+   "span": [
+    282,
+    482
+   ]
+  },
+  {
+   "rooms": [
+    "office",
+    "hall"
+   ],
+   "orient": "h",
+   "at": 482,
+   "span": [
+    64,
+    314
+   ]
+  },
+  {
+   "rooms": [
+    "library",
+    "studio"
+   ],
+   "orient": "v",
+   "at": 634,
+   "span": [
+    282,
+    482
+   ]
+  },
+  {
+   "rooms": [
+    "library",
+    "bedroom"
+   ],
+   "orient": "h",
+   "at": 482,
+   "span": [
+    314,
+    634
+   ]
+  },
+  {
+   "rooms": [
+    "studio",
+    "bathroom"
+   ],
+   "orient": "h",
+   "at": 482,
+   "span": [
+    634,
+    904
+   ]
+  },
+  {
+   "rooms": [
+    "hall",
+    "bedroom"
+   ],
+   "orient": "v",
+   "at": 314,
+   "span": [
+    482,
+    692
+   ]
+  },
+  {
+   "rooms": [
+    "hall",
+    "dining"
+   ],
+   "orient": "h",
+   "at": 692,
+   "span": [
+    64,
+    314
+   ]
+  },
+  {
+   "rooms": [
+    "bedroom",
+    "bathroom"
+   ],
+   "orient": "v",
+   "at": 634,
+   "span": [
+    482,
+    692
+   ]
+  },
+  {
+   "rooms": [
+    "bedroom",
+    "kitchen"
+   ],
+   "orient": "h",
+   "at": 692,
+   "span": [
+    314,
+    634
+   ]
+  },
+  {
+   "rooms": [
+    "bathroom",
+    "bootroom"
+   ],
+   "orient": "h",
+   "at": 692,
+   "span": [
+    634,
+    904
+   ]
+  },
+  {
+   "rooms": [
+    "dining",
+    "kitchen"
+   ],
+   "orient": "v",
+   "at": 314,
+   "span": [
+    692,
+    902
+   ]
+  },
+  {
+   "rooms": [
+    "kitchen",
+    "bootroom"
+   ],
+   "orient": "v",
+   "at": 634,
+   "span": [
+    692,
+    902
+   ]
+  }
+ ],
+ "back_door": {
+  "x": 904,
+  "y": 838
+ },
+ "threshold_rgb": "#c8955a",
+ "wall_rgb": "#15130f"
+}

@@ -1,0 +1,186 @@
+{
+ "structural": {
+  "track_paths": {
+   "b2-left": {
+    "style": "softened",
+    "start": [
+     -20.0,
+     704.0
+    ],
+    "end": [
+     340.0,
+     638.0
+    ],
+    "ends_in_bay": 2,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   },
+   "b2-right": {
+    "style": "softened",
+    "start": [
+     -20.0,
+     764.0
+    ],
+    "end": [
+     420.0,
+     638.0
+    ],
+    "ends_in_bay": 2,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   },
+   "b5-left": {
+    "style": "softened",
+    "start": [
+     -20.0,
+     740.0
+    ],
+    "end": [
+     880.0,
+     638.0
+    ],
+    "ends_in_bay": 5,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   },
+   "b5-right": {
+    "style": "softened",
+    "start": [
+     -20.0,
+     800.0
+    ],
+    "end": [
+     960.0,
+     638.0
+    ],
+    "ends_in_bay": 5,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   },
+   "b4-left": {
+    "style": "sharp",
+    "start": [
+     -20.0,
+     722.0
+    ],
+    "end": [
+     700.0,
+     638.0
+    ],
+    "ends_in_bay": 4,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   },
+   "b4-right": {
+    "style": "sharp",
+    "start": [
+     -20.0,
+     782.0
+    ],
+    "end": [
+     780.0,
+     638.0
+    ],
+    "ends_in_bay": 4,
+    "end_within_car_width": true,
+    "enters_through_gateway": true
+   }
+  },
+  "tracks_by_bay": {
+   "B2": "softened",
+   "B5": "softened",
+   "B4": "sharp"
+  },
+  "cars": {
+   "200": "#f1ce35",
+   "380": "#bd3e53",
+   "740": "#f1ce35",
+   "920": "#f1ce35"
+  },
+  "roof_snow_at": [
+   200,
+   380,
+   920
+  ]
+ },
+ "pixels": {
+  "bay1": {
+   "body": "yellow",
+   "roof": "snow/white",
+   "sharp_px_in_front": 0,
+   "softened_px_in_front": 0,
+   "tracks_entering": null
+  },
+  "bay2": {
+   "body": "red",
+   "roof": "snow/white",
+   "sharp_px_in_front": 0,
+   "softened_px_in_front": 100,
+   "tracks_entering": "softened"
+  },
+  "bay3": {
+   "body": "snow/white",
+   "roof": "snow/white",
+   "sharp_px_in_front": 0,
+   "softened_px_in_front": 0,
+   "tracks_entering": null
+  },
+  "bay4": {
+   "body": "yellow",
+   "roof": "yellow",
+   "sharp_px_in_front": 273,
+   "softened_px_in_front": 4,
+   "tracks_entering": "sharp"
+  },
+  "bay5": {
+   "body": "yellow",
+   "roof": "snow/white",
+   "sharp_px_in_front": 0,
+   "softened_px_in_front": 97,
+   "tracks_entering": "softened"
+  },
+  "yellow_scrape_px_in_C4_box": 564
+ },
+ "decoded_cars": {
+  "B1": [
+   "yellow",
+   true
+  ],
+  "B2": [
+   "red",
+   true
+  ],
+  "B4": [
+   "yellow",
+   false
+  ],
+  "B5": [
+   "yellow",
+   true
+  ]
+ },
+ "decoded_tracks": {
+  "B2": "softened",
+  "B4": "sharp",
+  "B5": "softened"
+ },
+ "logic_on_decoded_evidence": {
+  "possible_culprits": [
+   "B5"
+  ],
+  "ignoring_roof": [
+   "B5"
+  ],
+  "consistent_histories": 4509
+ },
+ "checks": {
+  "structural_tracks_match_inventory": true,
+  "all_paths_through_gateway_and_into_car": true,
+  "structural_cars_match": true,
+  "scrape_same_yellow_as_cars": true,
+  "pixel_cars_match": true,
+  "pixel_tracks_match": true,
+  "pixel_scrape_visible": true,
+  "logic_on_decoded_gives_bay5": true
+ }
+}

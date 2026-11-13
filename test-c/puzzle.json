@@ -1,0 +1,76 @@
+{
+  "id": "osp-poc-test-c",
+  "puzzle_type": {
+    "number": 13,
+    "name": "Detective scene with multiple interacting clues"
+  },
+  "title": "A Crunch in the Snow",
+  "question": "Which bay holds the car that hit the lamp post?",
+  "facts_on_image": [
+    "It snowed from 1 am until 3 am, then stopped.",
+    "At 2 am the night porter heard a crunch: a car clipped the lamp post by the entrance and left a smear of its paint on it. That car is still in the car park.",
+    "Every drive since 1 am left its own separate pair of tyre tracks, all still visible: softened by fresh snow if made while it was snowing, sharp if made after it stopped. Anything older is buried."
+  ],
+  "difficulty": {
+    "target": "Hard",
+    "author_assessment": "Claude (case author): Hard, with the bay-4 return-trip objection as the hard step",
+    "codex_assessment": "Medium, with a harder return-trip objection (codex-c1.json)",
+    "assessed": "Easy to Medium (blind solves: Easy, Medium, Easy; Codex: Medium; Claude: Medium at best)",
+    "gate_outcome": "Below target: reclassify as Medium (or Easy) or deepen the case before publication"
+  },
+  "model_responsibility": {
+    "case_answer_clue_inventory_alternatives_logic": "Claude Code (claude-opus-5-5)",
+    "scene_art_direction_image_prompt_title_caption_composition": "Codex CLI, model gpt-6-astra, effort xhigh, ChatGPT login, read-only sandbox (calls c1-c4)",
+    "image_generation": "OpenAI Images API gpt-image-2.6-flare, quality high, 1088x1088 (backdrop only)",
+    "deterministic_evidence": "Drawn by Codex in compose.svg; rasterised by Claude Code with CairoSVG",
+    "qa": "Claude Code (clue-by-clue review, check_evidence.py, verify_logic.py); Codex fresh-session blind solves"
+  },
+  "x_caption": "Which bay holds the car that clipped the lamp post? Reply with the bay number and the clues that rule out the others.",
+  "solution": {
+    "answer": "Bay 5",
+    "explanation": "The yellow smear limits the culprit to the yellow cars (bays 1, 4, 5). A 2 am drive during the snowfall leaves its own softened pair: bay 1 has no tracks (never moved), bay 4 has only a sharp pair (arrived after 3 am; any 2 am departure would have left a softened pair, and the only softened pairs belong to bays 2 and 5). Bay 5 is the only yellow car with softened tracks. Bay 2 also has softened tracks but is red."
+  },
+  "artifacts": {
+    "puzzle_png": "test-c/puzzle.png",
+    "preview_360": "test-c/qa/puzzle-360.png",
+    "source_image": "test-c/source-image.png",
+    "image_prompt": "test-c/image-prompt.txt",
+    "handoff": "test-c/handoff.json",
+    "composition_svg": "test-c/compose.svg",
+    "earlier_versions": [
+      "test-c/qa/puzzle-v1.png",
+      "test-c/qa/compose-v1.svg",
+      "test-c/qa/puzzle-v2.png",
+      "test-c/qa/compose-v2.svg",
+      "test-c/qa/puzzle-v3.png",
+      "test-c/qa/compose-v3.svg"
+    ],
+    "codex_outputs": [
+      "test-c/codex-c1.json",
+      "test-c/codex-c2.json",
+      "test-c/codex-c3.json",
+      "test-c/codex-c4.json",
+      "test-c/codex-c5.json"
+    ],
+    "logic_check": "test-c/verify_logic.py",
+    "logic_output": "test-c/logic-verification.json",
+    "evidence_check": "test-c/check_evidence.py",
+    "evidence_output": "test-c/qa/evidence-check.json",
+    "blind_solves": [
+      "test-c/qa/blind-solve-codex-v2.json",
+      "test-c/qa/blind-solve-codex-v3.json",
+      "test-c/qa/blind-solve-codex.json"
+    ],
+    "solution": "test-c/solution.md",
+    "qa_report": "test-c/qa-report.md"
+  },
+  "verification_status": {
+    "overall": "CONDITIONAL",
+    "handoff_clue_preservation": "All 13 clue ids present in the final PNG; one placement failure (C4/C1, fixed in c3) and two clue meanings that needed explicit public wording (paint, visibility; fixed in c4/c5)",
+    "logic_and_uniqueness": "PASS (programmatic joint-history enumeration on intended and decoded evidence)",
+    "visual_evidence": "PASS (programmatic SVG structure + pixel read-back; model-based inspection at 1080/360 px)",
+    "difficulty": "BELOW TARGET",
+    "composition": "REVIEW_REQUIRED",
+    "human_testing": "none"
+  }
+}

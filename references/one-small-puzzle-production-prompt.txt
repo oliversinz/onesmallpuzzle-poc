@@ -1,0 +1,41 @@
+# One Small Puzzle — single-type production test
+
+Act as the puzzle designer, visual designer and editor for One Small Puzzle, an English-language account for adults. Independently conceive, construct, render and verify ten original puzzles of the type specified below. Deliver the finished files in one run.
+
+## Puzzle type
+
+Language, age and everyday logic. Create ten original puzzles in which the reader resolves a sentence with two plausible meanings, works out someone’s age from clues about different points in time, or deduces what must have happened in a familiar situation. Vary the decisive insight across the set. A later remark might clarify whom “she” refers to, an age gap stays fixed even as an age ratio changes, or the order in which two coats were hung might explain which one can be taken off a hook first. Supply any fact the answer depends on, including birthday timing or how an object works. For harder puzzles, let two explanations fit the opening clue and make a second clue decide between them. In the private solution, show why the answer follows and test the strongest alternative against the exact wording and details visible in the finished image.
+
+## Editorial brief
+
+- Create ten distinct instances within this one type: 3 Easy, 4 Medium and 3 Hard. Use your own editorial judgment to assign difficulty. The calibration itself is part of the test.
+- Make even the easy entries worthwhile for adults. Let difficulty come from what the reader must notice, combine or deduce. Tiny details, poor contrast, specialist trivia and lengthy repetitive work make a weak substitute for a good idea.
+- Vary the decisive insight, the evidence the reader must use and the way the question is asked. During selection, privately describe the solving step for each candidate. If two descriptions differ only in the nouns, colours or numbers, rethink one of them.
+- Each puzzle must be self-contained and have a defensible answer. When the question promises one answer, make it unique under the public rules. Invent the actual instances and artwork.
+
+## Art direction
+
+**Reject a uniform look and feel across the series. Design each post individually and make the ten images visibly different when viewed together.** Choose the visual approach that makes that particular puzzle inviting and easy to understand.
+
+Vary the composition, viewpoint, medium and relationship between text and image. A full-frame illustration, a photographed-looking arrangement, a hand-drawn sketch, a close-up or a precise diagram are all available choices. These are possibilities, not a checklist. A restrained diagram can be exactly right. Give the puzzle itself as much of the frame as it needs.
+
+Avoid applying the same header, footer, card frame, type hierarchy and grid to every image. Changing only the accent colour, decorative texture or title does not create meaningful variation. Review the ten thumbnails together before delivery. If they still look like pages of the same workbook, redesign the most repetitive ones. Keep all solving evidence readable at phone size.
+
+## Deliverables
+
+For each puzzle, produce:
+
+1. **One finished 1080 × 1080 PNG.** Include the question and any necessary rules where they help the reader solve it. Make the public image free of answers, solution annotations and difficulty labels. Choose the rendering method for the job. Illustration or image generation can supply a setting, while exact counts, markings, positions and other critical details can be drawn deterministically.
+2. **One short, idiomatic English X caption.** Invite a specific response without giving away the insight. Avoid inflated success-rate claims, IQ bait and unnecessary hashtags.
+3. **A private answer and complete explanation.** Show how a reader can reach the answer from the published information. Explain how you checked any reasonable competing answer.
+4. **Brief editorial notes.** State the difficulty and why, the decisive solving step, and what you checked in the finished image.
+
+## Final checks and delivery
+
+Solve every candidate before accepting it. Inspect the actual final PNG at full size and at 360 pixels wide. Compare the visible clues, labels and spatial relationships with the private solution. Use enumeration, calculation or another independent check where it helps. Distinguish checks on the intended construction from observations on the rendered pixels. If a render introduces an unintended clue or another valid answer, repair or replace that candidate. Describe difficulty as your own assessment and claim human testing only if it actually occurred.
+
+Return a folder named `puzzle-test/` containing ten PNGs named `puzzle-01.png` through `puzzle-10.png` and one `puzzle-results.md`. In that document, list each ID, filename, puzzle type, short title, difficulty with rationale, exact caption, answer, explanation and verification notes. Keep public captions clearly separate from private answers.
+
+Provide links to the files and package them as `puzzle-test.zip` when supported. Work autonomously through final production. The test ends with file delivery for review. If an image cannot be produced or verified, identify the missing deliverable explicitly.
+
+Begin now.

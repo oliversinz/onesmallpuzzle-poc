@@ -1,0 +1,35 @@
+{
+  "label": "a2-compose",
+  "started": "2026-11-13T14:31:46+01:00",
+  "duration_s": 613.8,
+  "exit_code": 0,
+  "command": "codex exec -i /home/dev/Projects/onesmallpuzzle-poc/test-a/source-image.png -s read-only -C /home/dev/Projects/onesmallpuzzle-poc/test-a --json -o /home/dev/Projects/onesmallpuzzle-poc/test-a/codex-a2.json --output-schema /home/dev/Projects/onesmallpuzzle-poc/tools/schema-a2.json -",
+  "prompt_file": "test-a/codex-a2-prompt.md",
+  "images": [
+    "test-a/source-image.png"
+  ],
+  "output_file": "test-a/codex-a2.json",
+  "events_file": "logs/codex-a2-compose-events.jsonl",
+  "thread_id": "01a1d51b-6af0-7030-b240-584a2fc2b991",
+  "usage": {
+    "input_tokens": 172557,
+    "cached_input_tokens": 143232,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 20730,
+    "reasoning_output_tokens": 9765
+  },
+  "shell_commands_run_by_codex": 5,
+  "auth": "ChatGPT login (codex login status)",
+  "credential_found_in_output": false,
+  "session_file": "/home/dev/.codex/sessions/2026/11/13/rollout-2026-11-13T14-31-46-01a1d51b-6af0-7030-b240-584a2fc2b991.jsonl",
+  "cli_version": "0.169.0",
+  "originator": "codex_exec",
+  "source": "exec",
+  "model_provider": "openai",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "approval_policy": "never",
+  "sandbox_policy": {
+    "type": "read-only"
+  }
+}

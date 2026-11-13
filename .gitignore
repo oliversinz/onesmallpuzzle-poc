@@ -1,0 +1,5 @@
+.env
+.venv/
+references/*.zip
+__pycache__/
+logs/smoke-*

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_image_review", "usable", "changes_from_construction", "question_on_image", "rules_on_image",
+               "x_caption", "answer", "svg", "pixel_checks_for_claude"],
+  "properties": {
+    "generated_image_review": {"type": "string"},
+    "usable": {"type": "boolean"},
+    "changes_from_construction": {"type": "string"},
+    "question_on_image": {"type": "string"},
+    "rules_on_image": {"type": "string"},
+    "x_caption": {"type": "string"},
+    "answer": {"type": "string"},
+    "svg": {"type": "string"},
+    "pixel_checks_for_claude": {"type": "array", "items": {"type": "string"}}
+  }
+}

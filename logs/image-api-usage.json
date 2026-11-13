@@ -1,0 +1,72 @@
+[
+  {
+    "label": "test-a",
+    "requested_at": "2026-11-13T14:31:11+01:00",
+    "endpoint": "POST /v1/images/generations",
+    "model": "gpt-image-2.6-flare",
+    "quality": "high",
+    "size_requested": "1088x1088",
+    "n": 1,
+    "output_format": "png",
+    "prompt_file": "test-a/image-prompt.txt",
+    "prompt_sha256": "a8a71cf4d00ca23fb6d8596c3f72fb97e9762da20e4850e26548d011f611c979",
+    "http_status": 200,
+    "duration_s": 9.2,
+    "usage": {
+      "input_tokens": 341,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 341
+      },
+      "output_tokens": 1836,
+      "output_tokens_details": {
+        "image_tokens": 1836,
+        "text_tokens": 0
+      },
+      "total_tokens": 2177
+    },
+    "response_created": 1794576830,
+    "response_size": "1088x1088",
+    "response_quality": "high",
+    "response_background": "opaque",
+    "response_output_format": "png",
+    "output_file": "test-a/source-image.png",
+    "output_sha256": "7ae73ba114fdab8e76f0e5d32899143bb24e19dbc3e4bbfc8f4e9f22f265b64e",
+    "output_bytes": 1803501
+  },
+  {
+    "label": "test-c",
+    "requested_at": "2026-11-13T14:58:26+01:00",
+    "endpoint": "POST /v1/images/generations",
+    "model": "gpt-image-2.6-flare",
+    "quality": "high",
+    "size_requested": "1088x1088",
+    "n": 1,
+    "output_format": "png",
+    "prompt_file": "test-c/image-prompt.txt",
+    "prompt_sha256": "1b7be3903219222d04adbf6e1c6da86a4dded1febc51c3405c4bec41e53c5b20",
+    "http_status": 200,
+    "duration_s": 10.5,
+    "usage": {
+      "input_tokens": 455,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 455
+      },
+      "output_tokens": 1836,
+      "output_tokens_details": {
+        "image_tokens": 1836,
+        "text_tokens": 0
+      },
+      "total_tokens": 2291
+    },
+    "response_created": 1794578467,
+    "response_size": "1088x1088",
+    "response_quality": "high",
+    "response_background": "opaque",
+    "response_output_format": "png",
+    "output_file": "test-c/source-image.png",
+    "output_sha256": "f4405ee60e0a0dd6ed5097b85466bf7d5d72c96b60cd6a887de15f787d662a2f",
+    "output_bytes": 1796332
+  }
+]

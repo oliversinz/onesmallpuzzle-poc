@@ -1,0 +1,16 @@
+{
+  "answer": "B",
+  "reasoning": "B connects the two middle drawers to each other, so they can slide straight out together while remaining locked. A connects the top drawer to the fixed frame, and C connects the bottom drawer to the fixed frame, preventing those drawers from opening.",
+  "defensible_alternatives": [],
+  "ambiguities": [
+    "B is not entirely ineffective: it prevents the middle drawers from opening independently. It simply cannot keep them shut when they move together.",
+    "The hardware is schematic, but there is no obvious physical contradiction under the stated sliding rules."
+  ],
+  "difficulty": "Easy",
+  "difficulty_reason": "The solution requires one insight: locking two movable drawers together does not anchor either to the frame.",
+  "readability_issues": [
+    "At phone size, the smaller instruction text and the hardware attachment points may require zooming. Identifying which mounting plates attach to the frame is essential.",
+    "The main question and A/B/C labels are clear."
+  ],
+  "confidence": "high"
+}

@@ -1,0 +1,107 @@
+{
+ "room_luminance": {
+  "office": 57.0,
+  "library": 56.4,
+  "studio": 202.2,
+  "hall": 208.0,
+  "bedroom": 198.6,
+  "bathroom": 200.4,
+  "dining": 198.0,
+  "kitchen": 58.2,
+  "bootroom": 57.4
+ },
+ "doorways_found": [
+  {
+   "rooms": [
+    "office",
+    "library"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "office",
+    "hall"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "library",
+    "studio"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "library",
+    "bedroom"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "studio",
+    "bathroom"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "hall",
+    "dining"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "bedroom",
+    "bathroom"
+   ],
+   "run_px": [
+    72
+   ]
+  },
+  {
+   "rooms": [
+    "dining",
+    "kitchen"
+   ],
+   "run_px": [
+    63
+   ]
+  },
+  {
+   "rooms": [
+    "kitchen",
+    "bootroom"
+   ],
+   "run_px": [
+    63
+   ]
+  }
+ ],
+ "exterior_threshold_runs": [
+  {
+   "wall": "east",
+   "length_px": 72
+  }
+ ],
+ "lights_match_instance": true,
+ "doors_match_instance": true,
+ "single_exterior_opening_on_east": true,
+ "resolved_minimum_from_pixels": 13,
+ "resolved_shortest_walks": 2
+}

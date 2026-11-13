@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["changes", "remaining_risks", "svg"],
+  "properties": {
+    "changes": {"type": "string"},
+    "remaining_risks": {"type": "array", "items": {"type": "string"}},
+    "svg": {"type": "string"}
+  }
+}

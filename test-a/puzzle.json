@@ -1,0 +1,53 @@
+{
+  "id": "osp-poc-test-a",
+  "puzzle_type": {"number": 2, "name": "Illustrated observation and error spotting"},
+  "title": "The Workshop Cabinet",
+  "question": "Which padlock isn't keeping things shut?",
+  "rules_on_image": [
+    "Drawers slide straight out; only the locks hold them shut.",
+    "No unlocking, damage or dismantling. The frame is fixed."
+  ],
+  "difficulty": {
+    "target": "Medium or Hard",
+    "author_assessment": "Medium (Codex, gpt-6-astra)",
+    "assessed": "Easy to Medium (Claude: Medium, lower end; blind solve: Easy)",
+    "rationale": "One genuine reframing (a hasp joining two moving drawers anchors neither), but once the reader asks what each lock is attached to, the answer is quick.",
+    "gate_outcome": "Below target: reclassify as Easy or revise before publication"
+  },
+  "model_responsibility": {
+    "brief_and_orchestration": "Claude Code (claude-opus-5-5)",
+    "construction_answer_art_direction": "Codex CLI, model gpt-6-astra, effort xhigh, ChatGPT login, read-only sandbox (calls a1, a2, a3)",
+    "image_generation": "OpenAI Images API gpt-image-2.6-flare, quality high, 1088x1088 (background setting only)",
+    "final_composition": "SVG authored by Codex (compose.svg), rasterised by Claude Code with CairoSVG",
+    "qa": "Claude Code (independent review, requested revision a3); Codex fresh-session blind solve"
+  },
+  "x_caption": "A, B or C? Name the padlock that isn't doing its job—and explain why.",
+  "solution": {
+    "answer": "B",
+    "explanation": "B's hasp joins drawer 2 to drawer 3 and is not anchored to the fixed frame, so both drawers slide out together. A anchors drawer 1 to the frame top; C anchors drawer 4 to the frame bottom."
+  },
+  "artifacts": {
+    "puzzle_png": "test-a/puzzle.png",
+    "preview_360": "test-a/qa/puzzle-360.png",
+    "source_image": "test-a/source-image.png",
+    "image_prompt": "test-a/image-prompt.txt",
+    "composition_svg": "test-a/compose.svg",
+    "first_render": "test-a/qa/puzzle-v1.png",
+    "first_svg": "test-a/qa/compose-v1.svg",
+    "brief": "test-a/brief.md",
+    "codex_outputs": ["test-a/codex-a1.json", "test-a/codex-a2.json", "test-a/codex-a3.json"],
+    "blind_solve": "test-a/qa/blind-solve-codex.json",
+    "solution": "test-a/solution.md",
+    "qa_report": "test-a/qa-report.md"
+  },
+  "verification_status": {
+    "overall": "CONDITIONAL",
+    "delegation": "PASS (real Codex subprocess calls, model confirmed from session records)",
+    "image_generation": "PASS (usable asset from 1 paid request)",
+    "logic_and_uniqueness": "PASS after revision (model-based inspection; blind solve found no alternative)",
+    "visual_evidence": "PASS (model-based inspection at 1080 and 360 px)",
+    "difficulty": "BELOW TARGET",
+    "composition": "REVIEW_REQUIRED (style match of vector foreground to painted background)",
+    "human_testing": "none"
+  }
+}

@@ -1,0 +1,116 @@
+{
+ "rooms": {
+  "office": {
+   "name": "Office",
+   "cell": [
+    0,
+    0
+   ],
+   "lit": false
+  },
+  "library": {
+   "name": "Library",
+   "cell": [
+    0,
+    1
+   ],
+   "lit": false
+  },
+  "studio": {
+   "name": "Studio",
+   "cell": [
+    0,
+    2
+   ],
+   "lit": true
+  },
+  "hall": {
+   "name": "Hall",
+   "cell": [
+    1,
+    0
+   ],
+   "lit": true
+  },
+  "bedroom": {
+   "name": "Bedroom",
+   "cell": [
+    1,
+    1
+   ],
+   "lit": true
+  },
+  "bathroom": {
+   "name": "Bathroom",
+   "cell": [
+    1,
+    2
+   ],
+   "lit": true
+  },
+  "dining": {
+   "name": "Dining room",
+   "cell": [
+    2,
+    0
+   ],
+   "lit": true
+  },
+  "kitchen": {
+   "name": "Kitchen",
+   "cell": [
+    2,
+    1
+   ],
+   "lit": false
+  },
+  "bootroom": {
+   "name": "Boot room",
+   "cell": [
+    2,
+    2
+   ],
+   "lit": false
+  }
+ },
+ "doors": [
+  [
+   "office",
+   "library"
+  ],
+  [
+   "office",
+   "hall"
+  ],
+  [
+   "library",
+   "studio"
+  ],
+  [
+   "library",
+   "bedroom"
+  ],
+  [
+   "studio",
+   "bathroom"
+  ],
+  [
+   "hall",
+   "dining"
+  ],
+  [
+   "bedroom",
+   "bathroom"
+  ],
+  [
+   "dining",
+   "kitchen"
+  ],
+  [
+   "kitchen",
+   "bootroom"
+  ]
+ ],
+ "start": "hall",
+ "exit_room": "bootroom"
+}

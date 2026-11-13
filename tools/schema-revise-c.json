@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "changes",
+    "remaining_risks",
+    "svg",
+    "clue_locations"
+  ],
+  "properties": {
+    "changes": {
+      "type": "string"
+    },
+    "remaining_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "svg": {
+      "type": "string"
+    },
+    "clue_locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "clue_id",
+          "bbox",
+          "note"
+        ],
+        "properties": {
+          "clue_id": {
+            "type": "string"
+          },
+          "bbox": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

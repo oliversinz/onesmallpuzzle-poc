@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "question_on_image", "rules_on_image", "x_caption", "answer", "explanation", "decisive_step",
+               "alternatives_checked", "difficulty", "difficulty_rationale", "scene_concept", "art_direction",
+               "generation", "deterministic_layer", "composition_plan", "image_checks", "risks"],
+  "properties": {
+    "title": {"type": "string"},
+    "question_on_image": {"type": "string"},
+    "rules_on_image": {"type": "string"},
+    "x_caption": {"type": "string"},
+    "answer": {"type": "string"},
+    "explanation": {"type": "string"},
+    "decisive_step": {"type": "string"},
+    "alternatives_checked": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": false, "required": ["candidate", "why_rejected"],
+                "properties": {"candidate": {"type": "string"}, "why_rejected": {"type": "string"}}}
+    },
+    "difficulty": {"type": "string", "enum": ["Medium", "Hard"]},
+    "difficulty_rationale": {"type": "string"},
+    "scene_concept": {"type": "string"},
+    "art_direction": {"type": "string"},
+    "generation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["prompt", "size", "must_appear", "must_not_appear"],
+      "properties": {
+        "prompt": {"type": "string"},
+        "size": {"type": "string"},
+        "must_appear": {"type": "array", "items": {"type": "string"}},
+        "must_not_appear": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "deterministic_layer": {"type": "string"},
+    "composition_plan": {"type": "string"},
+    "image_checks": {"type": "array", "items": {"type": "string"}},
+    "risks": {"type": "array", "items": {"type": "string"}}
+  }
+}

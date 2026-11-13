@@ -1,0 +1,117 @@
+{
+  "handoff_issues": [
+    "Uniqueness depends on an idealised interpretation of F3: every drive must leave a separately recoverable pair. In real snow, a later pass can overwrite earlier tracks, allowing a competing Bay 4 return-trip explanation. The supplied wording does not explicitly resolve retracing.",
+    "Tracks alone do not establish travel direction. C10 can show that no additional pairs exist; 'no tracks leaving' must be inferred using F3, rather than depicted as an independently visible fact.",
+    "verify_logic.py checks a restricted model. Its sets collapse repeated same-bay, same-age tracks, and it assumes roof snow follows parking time. It does not exhaustively model vehicle movements or track overlap.",
+    "The fixed case is likely medium difficulty once the evidence is legible. Considering and eliminating Bay 4's possible return trip adds difficulty, but the visible colour-and-track intersection is otherwise straightforward."
+  ],
+  "deviations_from_handoff": [],
+  "title": "A Crunch in the Snow",
+  "question_on_image": "Which bay holds the car that hit the lamp post?",
+  "facts_on_image": [
+    "It snowed from 1 am until 3 am, then stopped.",
+    "At 2 am, the night porter heard a crunch: a car clipped the lamp post by the entrance. That car is still in the car park.",
+    "Every drive leaves its own pair of tyre tracks: softened by fresh snow if made while it was snowing, sharp if made after it stopped. Anything from before 1 am is buried."
+  ],
+  "x_caption": "Which bay holds the car that clipped the lamp post? Reply with the bay number and the clues that rule out the others.",
+  "scene_concept": "A quiet timber inn at winter dawn, seen from an elevated three-quarter viewpoint across its snowy courtyard. A muted terracotta facade and sheltered timber veranda frame five parking bays. The entrance and scraped lamp stand in the near foreground; the cars sit farther back, with their roofs and connecting tracks clearly visible. The atmosphere is hushed and painterly, with the evidence occupying a broad, uncluttered snow surface.",
+  "art_direction": "Editorial gouache with restrained print texture, dimensional cars and gently irregular architectural edges. Use pale lilac snow, plum shadows, dusty terracotta timber and muted evergreen trees. Reserve saturated lemon yellow for the three yellow cars and matching scrape, and clear crimson for the red car. Avoid yellow illumination around the scrape. Generated architecture supplies texture and atmosphere; deterministic objects use layered opaque shapes in the same visual language. Typography: URW Bookman for the title, DejaVu Sans for the question and facts. This is one continuous illustrated poster, without cards, header bars, footer bars or a floor-plan appearance.",
+  "generation": {
+    "prompt": "Create a square editorial illustration to serve as the atmospheric background for a winter detective puzzle. This is a background plate only; all puzzle evidence and typography will be added separately. Do not include any writing or puzzle objects.\n\nShow a small, distinctive timber inn at quiet winter dawn, viewed from a moderately elevated three-quarter angle across its courtyard. We should see building facades and roof planes, with ample visible ground; this must not look like an overhead floor plan or a front-on architectural elevation. Place the inn mainly across the upper-middle portion of the composition, with a low snow-covered roof, dusty terracotta timber walls, a simple sheltered wooden veranda and a few subdued pale windows. Muted evergreen trees rise behind the building and near the upper outer edges. Leave a generous calm area of pale lavender dawn sky near the top for later typography.\n\nThe foreground and central courtyard must be a very broad, completely empty, uninterrupted expanse of pale lilac snow. Leave especially generous open ground through the middle and lower two-thirds for later drawing. Do not populate or decorate this area. Keep the lower foreground pale and visually quiet for later text. The composition should feel like one full-bleed illustrated scene, with no panels, graphic frames, cards or caption boxes.\n\nMedium: sophisticated hand-painted gouache illustration with broad confident shapes, restrained paper texture, soft atmospheric depth and slightly irregular brush edges. Palette: lilac-white snow, plum-gray shadows, dusty terracotta wood, desaturated jade-green trees. The early morning air is still. Snowfall has ended; no snowflakes or precipitation are visible. Lighting is cool and diffuse, with no yellow pools of light.\n\nAbsolutely no vehicles, people, animals, tyre tracks, footprints, skid marks, ruts, paths through the snow, cleared snow, ploughed banks, parking lines, numbered bays, signs, letters, digits, arrows, clocks, lamps, lamp posts, freestanding bollards, paint scrapes or damaged objects. Do not add dark streaks or linear shadows to the courtyard. Do not add yellow accents. No answer indicators, puzzle symbols or watermarks. The parking boundary, entrance, entire evidence-bearing ground, cars, lamp and all lettering will be drawn later.",
+    "size": "1088x1088",
+    "must_appear": [
+      "A painterly timber inn and sheltered veranda in the upper-middle background.",
+      "An elevated oblique viewpoint showing both facades and a broad ground surface.",
+      "Quiet lilac dawn sky and muted evergreen background.",
+      "A large empty snow courtyard with room for deterministic composition.",
+      "Restrained gouache texture and a terracotta, lilac, plum and evergreen palette."
+    ],
+    "must_not_appear": [
+      "Any vehicle, person or animal.",
+      "Any tyre track, footprint, rut, skid mark or track-like ground shadow.",
+      "Any lettering, numerals, signage or parking markings.",
+      "Any lamp post, freestanding lamp, bollard or damaged object.",
+      "Any falling snow or other precipitation.",
+      "Any cleared ground, ploughed strip or conspicuous snow patch.",
+      "Yellow accents or yellow lighting.",
+      "Panels, cards, borders, answer marks or watermarks."
+    ]
+  },
+  "clue_mapping": [
+    {
+      "clue_id": "F1",
+      "method": "text",
+      "depiction": "Typeset the first facts_on_image string deterministically in the foreground snow margin. Keep both times on the same line if possible."
+    },
+    {
+      "clue_id": "F2",
+      "method": "text",
+      "depiction": "Typeset the complete second facts_on_image string deterministically, preserving the porter, 2 am incident, entrance lamp post and culprit's continued presence."
+    },
+    {
+      "clue_id": "F3",
+      "method": "text",
+      "depiction": "Typeset the complete third facts_on_image string deterministically. Give 'softened' and 'sharp' equal typographic emphasis; preserve the own-pair rule and burial cutoff without adding new assumptions."
+    },
+    {
+      "clue_id": "C1",
+      "method": "deterministic",
+      "depiction": "Draw the courtyard boundary and its single broad opening near the lower-left edge. The veranda closes the far side; a low continuous wall closes the remaining perimeter. All three track pairs connect through this opening."
+    },
+    {
+      "clue_id": "C2",
+      "method": "deterministic",
+      "depiction": "Draw exactly five dark kerb boards numbered 1–5, ordered left to right beside their respective bays. Use approximately 40 px off-white numerals with strong contrast and no snow covering them."
+    },
+    {
+      "clue_id": "C3",
+      "method": "deterministic",
+      "depiction": "Replace the complete evidence-bearing courtyard with an opaque, continuous lilac-white snow shape. Keep its interior free of generated texture, exposed patches and incidental linear marks."
+    },
+    {
+      "clue_id": "C4",
+      "method": "deterministic",
+      "depiction": "Draw one dark lamp just inside the entrance, beside the lane. Its near-facing, lane-side surface has a small bent contour and an irregular fresh lemon-yellow scrape at bumper height. The scrape uses the exact main body fill of the yellow cars and measures roughly 36 × 28 px."
+    },
+    {
+      "clue_id": "C5",
+      "method": "deterministic",
+      "depiction": "Bay 1 contains a yellow car with a broad white snow cap on its roof and clearly exposed yellow bodywork. Preserve a conspicuous area of uninterrupted snow around it; no track approaches the bay."
+    },
+    {
+      "clue_id": "C6",
+      "method": "deterministic",
+      "depiction": "Bay 2 contains a crimson car with a snow-covered roof. Draw one continuous softened pair from the gateway to its wheels, using broad pale edges and partially infilled grooves without crisp tread."
+    },
+    {
+      "clue_id": "C7",
+      "method": "deterministic",
+      "depiction": "Leave Bay 3 visibly empty beneath its number board. Its snow has exactly the same fill as the surrounding court, with no rectangular boundary, shadow, thinner patch or track."
+    },
+    {
+      "clue_id": "C8",
+      "method": "deterministic",
+      "depiction": "Bay 4 contains a yellow car whose entire roof is exposed yellow, without white reflections that could resemble snow. One sharp pair connects it to the gateway, with dark crisp groove edges and readable repeated tread marks."
+    },
+    {
+      "clue_id": "C9",
+      "method": "deterministic",
+      "depiction": "Bay 5 contains a yellow car with a broad white roof cap. One softened pair connects it to the gateway, using exactly the same treatment as Bay 2's tracks."
+    },
+    {
+      "clue_id": "C10",
+      "method": "deterministic",
+      "depiction": "Construct the foreground from a closed inventory: four cars and exactly three track pairs. Include no additional grooves, footprints, cleared strips or vehicles. Keep every route traceable to its bay, with no ambiguous crossings or hidden sections beneath another car. This depicts the absence of additional tracks; travel direction remains an inference under F3."
+    }
+  ],
+  "composition_plan": "Compose at 1080 × 1080. Place the title near the upper-left sky margin at about 54 px, with the question immediately below at about 33 px. Retain generated architecture mainly between y=170 and y=390, plus restrained background trees. Confine source-image.png to approved background regions using SVG clip paths; cover the whole court and its boundary with opaque deterministic artwork so generated foreground marks cannot survive. Arrange five generously spaced bays across approximately y=390–540, with car widths around 125–145 px and large exposed body-colour areas. A sheltered timber boarding edge sits outside the snowy driving surface beside the door sides of the parked cars; its recesses provide access while leaving the car roofs open to snowfall. Put the entrance near the lower-left edge, the lamp immediately inside it, and fan the three pairs through the central court to bays 2, 4 and 5. Keep routes away from bays 1 and 3. Both softened routes must remain physically plausible approaches to the scraped post, so proximity does not independently eliminate the red car. Give the track field approximately y=540–770. Soft tracks use two or three nested pale opaque strokes with gently uneven edges; sharp tracks use crisp darker grooves and tread elements at least 4 px thick. No filters or blur are needed. Set the three facts directly on the quiet foreground snow from approximately y=800 to y=1040, using 29–30 px DejaVu Sans with 34 px leading and explicit line breaks. Use a single continuous scene with irregular snow contours, rather than separate text panels. Keep all evidence, including the scrape and track endpoints, outside text areas. Final SVG uses explicit fills and strokes, ordinary paths, text and clip paths; no style element, masks, filters, foreignObject or external assets other than source-image.png.",
+  "difficulty_view": "The intended answer is Bay 5 under the supplied track rule. Yellow paint leaves bays 1, 4 and 5; softened tracks leave bays 2 and 5. Bay 4 is the strongest distraction because its yellow body and fresh tracks look suspicious, but its timing fails, and an earlier departure would require another surviving pair. This is a medium visual deduction with a harder return-trip objection, rather than securely Hard. Preserve clear evidence instead of manufacturing difficulty through obscurity.",
+  "risks": [
+    "The track-overwriting ambiguity remains in the supplied public rules; the illustration cannot resolve it without changing the case.",
+    "Gateway routing must keep each pair traceable while allowing both softened routes plausible bumper access to the post. Widely separated lanes could accidentally make paint colour unnecessary.",
+    "Softened tracks must remain visible at 360 px while looking distinctly different from the sharp pair. Inspect a reduced render before delivery.",
+    "The veranda access geometry must leave roofs exposed and avoid implying a cleared route through the snow.",
+    "Snow caps must leave enough bodywork visible to identify all three yellow cars and the red car immediately.",
+    "Generated texture must not leak into the controlled snow surface, and compact car shadows must not resemble additional tracks."
+  ]
+}

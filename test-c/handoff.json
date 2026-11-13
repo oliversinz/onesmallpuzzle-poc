@@ -1,0 +1,209 @@
+{
+  "handoff_version": 4,
+  "from": "Claude Code (claude-opus-5-5): case, answer, clue inventory, alternatives",
+  "to": "Codex CLI (scene, image prompt, composition)",
+  "puzzle_type": "Type 13: Detective scene with multiple interacting clues",
+  "target_difficulty": "Hard",
+  "logic_verification": "test-c/verify_logic.py v2 (joint histories of all four cars, multiset track match, occupancy; roof assumption optional) -> test-c/logic-verification.json",
+  "case_summary": "A small car park in front of a lodge/inn on a snowy night. Snow fell from 1 am to 3 am. At 2 am a car clipped the lamp post just inside the entrance, leaving a yellow paint scrape; that car is still in the car park. Four cars are parked in five numbered bays. The reader must date each car's last movement from its tyre tracks (softened = made while it snowed, sharp = made after the snow stopped, none = parked before the snow and never moved), match the paint, and rule out the stories that would let another yellow car be guilty.",
+  "public_facts": {
+    "note": "Wording may be polished for the image; the facts may not change. All three facts must be on the image.",
+    "F1_snow_window": "It snowed from 1 am until 3 am, then stopped.",
+    "F2_incident": "At 2 am the night porter heard a crunch: a car clipped the lamp post by the entrance and left a smear of its paint on it. That car is still in the car park.",
+    "F3_track_rule": "Every drive since 1 am left its own separate pair of tyre tracks, all still visible: softened by fresh snow if made while it was snowing, sharp if made after it stopped. Anything older is buried.",
+    "question": "Which bay holds the car that hit the lamp post?"
+  },
+  "answer": "Bay 5 (the yellow car with snow on its roof and softened tracks).",
+  "solution_chain": [
+    "The scrape is yellow, so the culprit is one of the yellow cars: bays 1, 4 and 5 (bay 2 is red).",
+    "The culprit was driving inside the car park at 2 am, inside the snowfall. Any track it made then is softened, not buried and not sharp.",
+    "Bay 1: snow on the roof and no tracks at all. It was parked before 1 am and never moved; a 2 am move would have left softened tracks.",
+    "Bay 4: sharp tracks and a clear roof. It arrived after 3 am. Could it have been here at 2 am, hit the post, left and come back? Leaving at 2 am would have left softened tracks out of the car park; there are none, and no softened tracks lead to bay 4.",
+    "Bay 5: softened tracks from the entrance and snow on the roof. It drove in while it was snowing. It is the only yellow car that can have been moving at 2 am. Answer: bay 5.",
+    "Bay 2 (red) also has softened tracks and so was moving during the snowfall, but the paint rules it out."
+  ],
+  "candidates": [
+    "bay 1",
+    "bay 2",
+    "bay 4",
+    "bay 5"
+  ],
+  "plausible_alternatives": [
+    {
+      "answer": "Bay 4",
+      "why_tempting": "Most 'suspicious' look: the only clear roof and the freshest tracks, and it is yellow.",
+      "eliminated_by": [
+        "C8",
+        "C10",
+        "F1",
+        "F3"
+      ],
+      "reason": "Sharp tracks mean it arrived after 3 am. To have hit the post at 2 am it would have had to drive out during the snowfall, which would have left its own softened tracks (every drive leaves its own tracks); there are none."
+    },
+    {
+      "answer": "Bay 2",
+      "why_tempting": "Softened tracks: it was moving during the snowfall.",
+      "eliminated_by": [
+        "C4",
+        "C6"
+      ],
+      "reason": "It is red; the scrape is yellow."
+    },
+    {
+      "answer": "Bay 1",
+      "why_tempting": "Yellow, and closest to the lamp post if the layout places it there.",
+      "eliminated_by": [
+        "C5",
+        "C10",
+        "F3"
+      ],
+      "reason": "No tracks: parked before the snow and never moved."
+    },
+    {
+      "answer": "Bay 5 is innocent because its snowy roof shows it stood there all night",
+      "why_tempting": "Roof snow looks like bay 1's.",
+      "eliminated_by": [
+        "C9",
+        "F3"
+      ],
+      "reason": "Roof snow only shows it stood still for part of the snowfall; its softened tracks show it arrived during the snowfall."
+    }
+  ],
+  "clue_inventory": [
+    {
+      "id": "F1",
+      "kind": "text",
+      "content": "Snow 1 am to 3 am.",
+      "deterministic": true
+    },
+    {
+      "id": "F2",
+      "kind": "text",
+      "content": "2 am crunch; the car left a smear of its own paint on the lamp post; that car is still in the car park.",
+      "deterministic": true
+    },
+    {
+      "id": "F3",
+      "kind": "text",
+      "content": "Every drive since 1 am left its own separate, still-visible pair (no retracing, none hidden); softened = made while snowing; sharp = after; older = buried.",
+      "deterministic": true
+    },
+    {
+      "id": "C1",
+      "kind": "visual",
+      "content": "One single entrance/gateway to the car park. Every tyre track enters through it.",
+      "deterministic": "recommended"
+    },
+    {
+      "id": "C2",
+      "kind": "visual",
+      "content": "Five bays clearly numbered 1 to 5 (number boards, painted signs or kerb markers; must stay readable at 360 px even under snow).",
+      "deterministic": true
+    },
+    {
+      "id": "C3",
+      "kind": "visual",
+      "content": "Ground everywhere covered by an even layer of fresh snow, except where tracks are drawn.",
+      "deterministic": "recommended"
+    },
+    {
+      "id": "C4",
+      "kind": "visual",
+      "content": "A lamp post just inside the entrance, beside the entrance lane, with an obvious fresh yellow paint scrape and small dent at car-bumper height on the side facing the lane. The yellow must match the yellow cars and be clearly not red or orange. It must read unmistakably as a smear of transferred car paint (a scuffed streak along the post), not as an impact star, burst or symbol.",
+      "deterministic": true
+    },
+    {
+      "id": "C5",
+      "kind": "visual",
+      "content": "Bay 1: yellow car, roof covered in snow, no tracks anywhere near it; smooth snow around it.",
+      "deterministic": true
+    },
+    {
+      "id": "C6",
+      "kind": "visual",
+      "content": "Bay 2: red car, roof covered in snow, one pair of SOFTENED tyre tracks from the entrance into bay 2.",
+      "deterministic": true
+    },
+    {
+      "id": "C7",
+      "kind": "visual",
+      "content": "Bay 3: empty, smooth even snow, no tracks, no rectangle or patch of thinner snow.",
+      "deterministic": true
+    },
+    {
+      "id": "C8",
+      "kind": "visual",
+      "content": "Bay 4: yellow car, roof completely clear of snow (body colour visible), one pair of SHARP tyre tracks from the entrance into bay 4.",
+      "deterministic": true
+    },
+    {
+      "id": "C9",
+      "kind": "visual",
+      "content": "Bay 5: yellow car, roof covered in snow, one pair of SOFTENED tyre tracks from the entrance into bay 5.",
+      "deterministic": true
+    },
+    {
+      "id": "C10",
+      "kind": "visual (absence)",
+      "content": "No other tracks: no tracks leaving, no second pair to any bay, no tracks to or from bay 1 or 3, no footprints, no shovelled or ploughed areas, no other vehicles.",
+      "deterministic": true
+    }
+  ],
+  "visibility_requirements": [
+    "Softened vs sharp must be obvious at 360 px: e.g. softened = pale, blurred-looking, partly filled, low contrast; sharp = crisp, dark-edged, tread visible. A reader must never have to guess which kind a track is.",
+    "Tracks to different bays must not cross ambiguously or pass under another parked car; each pair visibly ends in its own bay.",
+    "Roof snow: bays 1, 2, 5 unmistakably snow-capped; bay 4 unmistakably bare.",
+    "Car colours: three identical yellows (bays 1, 4, 5) and one clear red (bay 2). The scrape uses the same yellow.",
+    "Bay numbers and all text readable at 360 px.",
+    "No footprints are drawn, so make that natural: e.g. the bays face a covered porch or walkway, or the drivers' route is otherwise plausibly out of the snow. Do not add footprints."
+  ],
+  "must_not_appear": [
+    "Any generated vehicle, tyre track, footprint, number, letter or sign that could conflict with the deterministic evidence.",
+    "Any second lamp post or other damaged object that could be the 'lamp post'.",
+    "Snow falling in the image (it stopped at 3 am; falling snow would muddle sharp vs softened), unless clearly framed as an earlier moment, which is not allowed here.",
+    "Any hint of the answer: highlights, arrows, circled bay, difficulty label."
+  ],
+  "codex_freedom": [
+    "Setting identity (lodge, inn, B&B, station car park...), country styling, season details beyond snow, time of morning/night as long as it is after 3 am.",
+    "Viewpoint (top-down, high-angle, front-on), medium and palette, provided every clue stays exact and readable.",
+    "Title, final public wording (facts unchanged), caption.",
+    "Which elements come from the generated image and which are drawn deterministically, subject to the deterministic flags above."
+  ],
+  "pipeline": {
+    "image_generation": "Exactly one OpenAI Images API request: gpt-image-2.6-flare, quality high, n=1, PNG, prompt sent verbatim. Size: 1024x1024, 1088x1088, 1536x1024, 1024x1536, or WIDTHxHEIGHT with multiples of 16, no side above 1536. No retries.",
+    "composition": "After generation Codex receives the actual image and authors the final 1080x1080 SVG (CairoSVG 2.9; no filters, <style>, masks, foreignObject or external files except source-image.png).",
+    "qa": "Claude checks the final PNG against every clue id above, at 1080 and 360 px, and re-runs the logic on what is actually visible."
+  },
+  "revision_log": [
+    {
+      "version": 1,
+      "by": "Claude",
+      "note": "Initial handoff."
+    },
+    {
+      "version": 2,
+      "by": "Claude, after Codex review (codex-c1.json handoff_issues)",
+      "changes": [
+        "F3: 'its own pair' -> 'since 1 am left its own separate pair' to exclude a later drive retracing an older one (Codex issue 1).",
+        "verify_logic.py rewritten: v1 treated tracks as sets per bay and cars independently; v2 enumerates joint histories with track multisets and bay occupancy, so swap stories (e.g. bay-4 car leaving bay 5 at 2 am) are tested. Result unchanged: only bay 5 (Codex issue 3).",
+        "Direction of travel is not depicted and not needed: the argument uses only which pairs exist and their age (Codex issue 2, accepted as-is).",
+        "Difficulty: Codex assesses Medium with a harder return-trip objection; recorded, case not changed (Codex issue 4)."
+      ]
+    },
+    {
+      "version": 3,
+      "by": "Claude, after the independent blind solve of the final PNG (qa/blind-solve-codex.json)",
+      "changes": [
+        "F2 now states that the car left a smear of its paint on the post. Before, the paint meaning of the yellow mark rested on the drawing alone; the blind solver read the star-shaped mark as a cartoon impact burst, which makes bay 2 defensible (timing alone gives bays 2 and 5).",
+        "C4: the scrape must read as a paint smear, not an impact symbol."
+      ]
+    },
+    {
+      "version": 4,
+      "by": "Claude, after the second blind solve (qa/blind-solve-codex.json before c5)",
+      "changes": [
+        "F3 now says the post-1 am pairs are all still visible. The blind solver raised a weak conditional alternative: bay 1 (next to the lamp) might have made a tiny 2 am shuffle whose tracks are hidden under the car."
+      ]
+    }
+  ]
+}

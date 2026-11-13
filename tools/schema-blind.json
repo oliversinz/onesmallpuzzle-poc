@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer", "reasoning", "defensible_alternatives", "ambiguities", "difficulty", "difficulty_reason", "readability_issues", "confidence"],
+  "properties": {
+    "answer": {"type": "string"},
+    "reasoning": {"type": "string"},
+    "defensible_alternatives": {"type": "array", "items": {"type": "string"}},
+    "ambiguities": {"type": "array", "items": {"type": "string"}},
+    "difficulty": {"type": "string", "enum": ["Easy", "Medium", "Hard", "Very Hard"]},
+    "difficulty_reason": {"type": "string"},
+    "readability_issues": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "string", "enum": ["low", "medium", "high"]}
+  }
+}

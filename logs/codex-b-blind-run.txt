@@ -1,0 +1,35 @@
+{
+  "label": "b-blind",
+  "started": "2026-11-13T14:47:49+01:00",
+  "duration_s": 322.4,
+  "exit_code": 0,
+  "command": "codex exec -i /home/dev/Projects/onesmallpuzzle-poc/test-b/puzzle.png -s read-only -C /home/dev/Projects/onesmallpuzzle-poc/logs/blind-empty --json -o /home/dev/Projects/onesmallpuzzle-poc/test-b/qa/blind-solve-codex.json --output-schema /home/dev/Projects/onesmallpuzzle-poc/tools/schema-blind.json -",
+  "prompt_file": "tools/blind-solve-prompt.md",
+  "images": [
+    "test-b/puzzle.png"
+  ],
+  "output_file": "test-b/qa/blind-solve-codex.json",
+  "events_file": "logs/codex-b-blind-events.jsonl",
+  "thread_id": "01a1d52a-1f65-7701-8ce7-839240798855",
+  "usage": {
+    "input_tokens": 17483,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7998,
+    "reasoning_output_tokens": 7637
+  },
+  "shell_commands_run_by_codex": 0,
+  "auth": "ChatGPT login (codex login status)",
+  "credential_found_in_output": false,
+  "session_file": "/home/dev/.codex/sessions/2026/11/13/rollout-2026-11-13T14-47-49-01a1d52a-1f65-7701-8ce7-839240798855.jsonl",
+  "cli_version": "0.169.0",
+  "originator": "codex_exec",
+  "source": "exec",
+  "model_provider": "openai",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "approval_policy": "never",
+  "sandbox_policy": {
+    "type": "read-only"
+  }
+}

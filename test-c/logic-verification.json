@@ -1,0 +1,22 @@
+{
+ "model": "joint histories of 4 cars, 0-2 drives each, multiset track match, occupancy",
+ "consistent_joint_histories": 4509,
+ "possible_culprit_bays": [
+  "B5"
+ ],
+ "possible_culprit_bays_ignoring_roof_snow": [
+  "B5"
+ ],
+ "consistent_joint_histories_ignoring_roof_snow": 4509,
+ "possible_culprit_bays_without_paint_colour": [
+  "B2",
+  "B5"
+ ],
+ "possible_culprit_bays_without_track_evidence": [
+  "B1",
+  "B4",
+  "B5"
+ ],
+ "unique": true,
+ "each_clue_necessary": true
+}
